@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi primer Formulario</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/purecss@2.0.6/build/pure-min.css"
+      integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5"
+      crossorigin="anonymous"
+    />
+   
+  </head>
+  <body>
+    <form
+    class="pure-form-aligned"
+      method="GET"
+      enctype="application/x-www-form-urlencoded"
+      action="/noexiste.html"
+      class="myForm"
+    >
+      <p>
+        <label
+          >Nombre
+          <input type="text" name="nombre_cliente" required />
+        </label>
+      </p>
+
+      <p>
+        <label
+          >Telefono
+          <input type="tel" name="numero_telefono" required />
+        </label>
+      </p>
+
+      <p>
+        <label
+          >Email
+          <input type="email" name="direccion_correo" required />
+        </label>
+      </p>
+
+      <fieldset>
+        <legend>Que taxi quiere?</legend>
+        <p>
+          <label>
+            <input type="radio" name="taxi" required value="car" />
+            Carrito
+          </label>
+        </p>
+
+        <p>
+          <label>
+            <input type="radio" name="taxi" required value="van" />
+            Suv
+          </label>
+        </p>
+
+        <p>
+          <label>
+            <input type="radio" name="taxi" required value="tuktuk" />
+            tuk tuk
+          </label>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Extras</legend>
+        <p>
+          <label>
+            <input type="checkbox" name="extras" value="musica" />
+            NO REGUETON
+          </label>
+        </p>
+
+        <p>
+          <label>
+            <input type="checkbox" name="extras" value="sillaruedas" />
+            silla de ruedas
+          </label>
+        </p>
+      </fieldset>
+
+      <p>
+        <label
+          >Dia y hora?
+          <input type="datetime-local" name="fecha_hora" required />
+        </label>
+      </p>
+
+      <p>
+        <label
+          >Lugar para recoger
+          <select name="pickup_place" id="pickup_place">
+            <option value="" selected="selected">Seleccione Opcion</option>
+            <option value="Oficina">Oficina</option>
+            <option value="Feria">La Feria</option>
+            <option value="La_U">La Universidad</option>
+            <option value="no_se">Le digo al cacho</option>
+          </select>
+        </label>
+      </p>
+
+      <p>
+        <label
+          >Dejar en:
+          <input type="text" name="dejar_en" required list="destino" />
+        </label>
+
+        <datalist id="destino">
+          <option value="Aereopuerto"></option>
+          <option value="Playa"></option>
+          <option value="La Biblioteca"></option>
+        </datalist>
+      </p>
+      <p>
+        <label>
+          Instrucciones Especiales
+          <textarea name="comentarios" maxlength="500"></textarea>
+        </label>
+      </p>
+      <p>
+        <button class="pure-button pure-button-primary">Hacer Cita</button>
+      </p>
+    </form>
+  </body>
+</html>
